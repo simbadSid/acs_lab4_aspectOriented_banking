@@ -1,0 +1,89 @@
+Mar 30, 2016 8:24:33 PM SimpleAccountTest main
+	[This: null]
+	[Args: ([Ljava.lang.String;@315e08)
+INFO: Entering
+Mar 30, 2016 8:24:33 PM SimpleAccountImpl getBalance
+	[This: testHandCodedMethod4.banking.SimpleAccountImpl@105013c]
+	[Args: ()
+INFO: Entering
+Mar 30, 2016 8:24:33 PM SimpleAccountImpl getBalance
+	[This: testHandCodedMethod4.banking.SimpleAccountImpl@c1f8ca]
+	[Args: ()
+INFO: Entering
+
+SimpleAccountTest.main: Initially, account1.balance=100.0, account2.balance=0.0
+Mar 30, 2016 8:24:33 PM InterAccountOperations transfer
+	[This: null]
+	[Args: (testHandCodedMethod4.banking.SimpleAccountImpl@105013c, testHandCodedMethod4.banking.SimpleAccountImpl@c1f8ca, 100.0)
+INFO: Entering
+Mar 30, 2016 8:24:33 PM SimpleAccountImpl debit
+	[This: testHandCodedMethod4.banking.SimpleAccountImpl@105013c]
+	[Args: (100.0)
+INFO: Entering
+Mar 30, 2016 8:24:33 PM SimpleAccountImpl getBalance
+	[This: testHandCodedMethod4.banking.SimpleAccountImpl@105013c]
+	[Args: ()
+INFO: Entering
+Mar 30, 2016 8:24:33 PM SimpleAccountImpl setBalance
+	[This: testHandCodedMethod4.banking.SimpleAccountImpl@105013c]
+	[Args: (0.0)
+INFO: Entering
+Mar 30, 2016 8:24:33 PM SimpleAccountImpl credit
+	[This: testHandCodedMethod4.banking.SimpleAccountImpl@c1f8ca]
+	[Args: (100.0)
+INFO: Entering
+Mar 30, 2016 8:24:33 PM SimpleAccountImpl getBalance
+	[This: testHandCodedMethod4.banking.SimpleAccountImpl@c1f8ca]
+	[Args: ()
+INFO: Entering
+Mar 30, 2016 8:24:33 PM SimpleAccountImpl setBalance
+	[This: testHandCodedMethod4.banking.SimpleAccountImpl@c1f8ca]
+	[Args: (100.0)
+INFO: Entering
+Mar 30, 2016 8:24:33 PM SimpleAccountImpl getBalance
+	[This: testHandCodedMethod4.banking.SimpleAccountImpl@105013c]
+	[Args: ()
+INFO: Entering
+
+SimpleAccountTest.main: After 1st transfer 100 ac1 -> ac2, account1.balance=0.0, account2.balance=100.0
+Mar 30, 2016 8:24:33 PM SimpleAccountImpl getBalance
+	[This: testHandCodedMethod4.banking.SimpleAccountImpl@c1f8ca]
+	[Args: ()
+INFO: Entering
+Mar 30, 2016 8:24:33 PM InterAccountOperations transfer
+	[This: null]
+	[Args: (testHandCodedMethod4.banking.SimpleAccountImpl@105013c, testHandCodedMethod4.banking.SimpleAccountImpl@c1f8ca, 100.0)
+INFO: Entering
+Mar 30, 2016 8:24:33 PM SimpleAccountImpl debit
+	[This: testHandCodedMethod4.banking.SimpleAccountImpl@105013c]
+	[Args: (100.0)
+INFO: Entering
+Mar 30, 2016 8:24:33 PM SimpleAccountImpl getBalance
+	[This: testHandCodedMethod4.banking.SimpleAccountImpl@105013c]
+	[Args: ()
+INFO: Entering
+Mar 30, 2016 8:24:33 PM SimpleAccountImpl debit
+WARNING: Exception
+testHandCodedMethod4.banking.InsufficientBalanceException: Total balance not sufficient
+	at testHandCodedMethod4.banking.SimpleAccountImpl.debit(SimpleAccountImpl.java:199)
+	at testHandCodedMethod4.banking.InterAccountOperations.transfer(InterAccountOperations.java:55)
+	at testHandCodedMethod4.test.SimpleAccountTest.main(SimpleAccountTest.java:63)
+
+Mar 30, 2016 8:24:33 PM InterAccountOperations transfer
+WARNING: Exception
+testHandCodedMethod4.banking.InsufficientBalanceException: Total balance not sufficient
+	at testHandCodedMethod4.banking.SimpleAccountImpl.debit(SimpleAccountImpl.java:199)
+	at testHandCodedMethod4.banking.InterAccountOperations.transfer(InterAccountOperations.java:55)
+	at testHandCodedMethod4.test.SimpleAccountTest.main(SimpleAccountTest.java:63)
+
+Mar 30, 2016 8:24:33 PM SimpleAccountTest main
+WARNING: Exception
+testHandCodedMethod4.banking.InsufficientBalanceException: Total balance not sufficient
+	at testHandCodedMethod4.banking.SimpleAccountImpl.debit(SimpleAccountImpl.java:199)
+	at testHandCodedMethod4.banking.InterAccountOperations.transfer(InterAccountOperations.java:55)
+	at testHandCodedMethod4.test.SimpleAccountTest.main(SimpleAccountTest.java:63)
+
+Exception in thread "main" testHandCodedMethod4.banking.InsufficientBalanceException: Total balance not sufficient
+	at testHandCodedMethod4.banking.SimpleAccountImpl.debit(SimpleAccountImpl.java:199)
+	at testHandCodedMethod4.banking.InterAccountOperations.transfer(InterAccountOperations.java:55)
+	at testHandCodedMethod4.test.SimpleAccountTest.main(SimpleAccountTest.java:63)

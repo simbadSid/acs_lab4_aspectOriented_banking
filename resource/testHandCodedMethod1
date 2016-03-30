@@ -1,0 +1,38 @@
+Mar 30, 2016 8:23:27 PM SimpleAccountTest main
+INFO: Entering
+Mar 30, 2016 8:23:27 PM SimpleAccountImpl getBalance
+INFO: Entering
+Mar 30, 2016 8:23:27 PM SimpleAccountImpl getBalance
+INFO: Entering
+
+SimpleAccountTest.main: Initially, account1.balance=100.0, account2.balance=0.0
+Mar 30, 2016 8:23:27 PM InterAccountOperations transfer
+INFO: Entering
+Mar 30, 2016 8:23:27 PM SimpleAccountImpl debit
+INFO: Entering
+Mar 30, 2016 8:23:27 PM SimpleAccountImpl getBalance
+INFO: Entering
+Mar 30, 2016 8:23:27 PM SimpleAccountImpl setBalance
+INFO: Entering
+Mar 30, 2016 8:23:27 PM SimpleAccountImpl credit
+INFO: Entering
+Mar 30, 2016 8:23:27 PM SimpleAccountImpl getBalance
+INFO: Entering
+Mar 30, 2016 8:23:27 PM SimpleAccountImpl setBalance
+INFO: Entering
+Mar 30, 2016 8:23:27 PM SimpleAccountImpl getBalance
+INFO: Entering
+
+SimpleAccountTest.main: After 1st transfer 100 ac1 -> ac2, account1.balance=0.0, account2.balance=100.0
+Mar 30, 2016 8:23:27 PM SimpleAccountImpl getBalance
+INFO: Entering
+Mar 30, 2016 8:23:27 PM InterAccountOperations transfer
+INFO: Entering
+Mar 30, 2016 8:23:27 PM SimpleAccountImpl debit
+INFO: Entering
+Mar 30, 2016 8:23:27 PM SimpleAccountImpl getBalance
+INFO: Entering
+Exception in thread "main" testHandCodedMethod1.banking.InsufficientBalanceException: Total balance not sufficient
+	at testHandCodedMethod1.banking.SimpleAccountImpl.debit(SimpleAccountImpl.java:147)
+	at testHandCodedMethod1.banking.InterAccountOperations.transfer(InterAccountOperations.java:43)
+	at testHandCodedMethod1.test.SimpleAccountTest.main(SimpleAccountTest.java:52)
