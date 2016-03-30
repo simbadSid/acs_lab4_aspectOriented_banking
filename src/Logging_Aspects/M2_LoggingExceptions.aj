@@ -33,9 +33,7 @@ public aspect M2_LoggingExceptions
 
 	void exceptionHandler(Signature sig, AccountException e) throws AccountException
 	{
-		String		className	= sig.getDeclaringTypeName();
-		String		methodName	= sig.getName();
-		M1_LoggingMethods.logger.logp(Level.INFO, className, methodName, "Exception");
+		M1_LoggingMethods.printer(sig, Level.WARNING, false, null, null, "Exception", e);
 		throw e;
 	}
 }
