@@ -1,8 +1,6 @@
 package Logging_Aspects;
 
 import java.util.logging.Level;
-
-import org.apache.log4j.Logger;
 import org.aspectj.lang.Signature;
 
 
@@ -20,8 +18,8 @@ public aspect M1_LoggingMethods
 // ----------------------------------------
 	public static String		loggerName		= "trace";
 	public static boolean		loggerHasArg	= true;								// Used for method 3
-//	public static Class<?>		loggerType		= java.util.logging.Logger.class;
-	public static Class<?>		loggerType		= org.apache.log4j.Logger.class;
+	public static Class<?>		loggerType		= java.util.logging.Logger.class;
+//	public static Class<?>		loggerType		= org.apache.log4j.Logger.class;
 	public static CustomLogger	logger 			= new CustomLogger(loggerName, loggerType);
 
 // ----------------------------------------
@@ -92,6 +90,6 @@ public aspect M1_LoggingMethods
 			args = "\n\t[This: " + currentObj + "]\n\t[Args: (" + parameterStr + ")";
 		}
 
-//		logger.logp(loggerLevel, className, methodName+args, msg, e);
+		logger.logp(loggerLevel, className, methodName+args, msg, e);
 	}
 }
