@@ -40,7 +40,7 @@ public aspect M1_LoggingMethods
 		execution(* banking.InterAccountOperations.*(..));
 
 // ----------------------------------------
-// Advices
+// Advises
 // ----------------------------------------
 	before(): methodExecutionSimpleAccountTest()								//	Log before each method execution
 	{
@@ -81,8 +81,8 @@ public aspect M1_LoggingMethods
 
 		if (printArg)
 		{
-			String		parameterStr	= "";
-			int			nbrParameters	= parameterTab.length;
+			String	parameterStr	= "";
+			int		nbrParameters	= parameterTab.length;
 			for (int i=0; i<nbrParameters-1; i++)
 				parameterStr += parameterTab[i] + ", ";
 			if (nbrParameters > 0)

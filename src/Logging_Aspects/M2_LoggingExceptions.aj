@@ -16,23 +16,20 @@ public aspect M2_LoggingExceptions
 	after() throwing(AccountException e) throws AccountException: M1_LoggingMethods.methodExecutionSimpleAccountTest()
 	{
 		Signature sig = thisJoinPointStaticPart.getSignature();
-		exceptionHandler(sig, e);
+		M1_LoggingMethods.printer(sig, Level.WARNING, false, null, null, "Exception", e);
+		throw e;
 	}
 
 	after() throwing(AccountException e) throws AccountException: M1_LoggingMethods.methodExecutionSimpleAccountImplement()
 	{
 		Signature sig = thisJoinPointStaticPart.getSignature();
-		exceptionHandler(sig, e);
+		M1_LoggingMethods.printer(sig, Level.WARNING, false, null, null, "Exception", e);
+		throw e;
 	}
 
 	after() throwing(AccountException e) throws AccountException: M1_LoggingMethods.methodExecutionInterAccountOperations()
 	{
 		Signature sig = thisJoinPointStaticPart.getSignature();
-		exceptionHandler(sig, e);
-	}
-
-	void exceptionHandler(Signature sig, AccountException e) throws AccountException
-	{
 		M1_LoggingMethods.printer(sig, Level.WARNING, false, null, null, "Exception", e);
 		throw e;
 	}
